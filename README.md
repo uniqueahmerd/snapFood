@@ -12,7 +12,7 @@ SnapFood contains a React client, a Node.js API, and an AI inference service.
 ## Clone
 
 ```sh
-git clone <repository-url> snapFood
+git clone https://github.com/uniqueahmerd/snapFood.git snapFood
 cd snapFood
 git lfs install
 git lfs pull
@@ -38,10 +38,10 @@ From the project root, build and run the container:
 
 ```sh
 docker build -t snapfood-ai ./ai-service/snapFood-ai
-docker run --rm -p 8000:7860 -e AI_ADMIN_TOKEN=replace-with-a-long-random-service-token snapfood-ai
+docker run --rm -p 7860:7860 -e AI_ADMIN_TOKEN=replace-with-a-long-random-service-token snapfood-ai
 ```
 
-Set `AI_URL=http://localhost:8000/predict` in `backend/.env`. If using admin/model-management features, set the same high-entropy `AI_ADMIN_TOKEN` in both places.
+Set `AI_URL=http://localhost:7860/predict` in `backend/.env`. If using admin/model-management features, set the same high-entropy `AI_ADMIN_TOKEN` in both places.
 
 ## Start the client
 
