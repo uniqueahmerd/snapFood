@@ -1,0 +1,65 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "nodemon --watch src --ext ts,json --exec tsx src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "maildev": "maildev",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "node --import tsx --test src/shared/utils/generateOTP.test.ts src/modules/email/email.templates.test.ts src/services/ai-url.test.ts src/modules/system/system.repo.test.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "11.22.0",
+      "onFail": "download"
+    }
+  },
+  "type": "commonjs",
+  "dependencies": {
+    "axios": "^1.20.0",
+    "bcryptjs": "^3.0.3",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.15.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.4",
+    "express": "^5.2.1",
+    "express-validator": "^7.3.2",
+    "helmet": "^8.3.0",
+    "ioredis": "^5.11.1",
+    "jsonwebtoken": "^9.0.3",
+    "morgan": "^1.12.1",
+    "nodemailer": "^10.0.11",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0",
+    "pg": "^8.23.0",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^1.1.1",
+    "uuid": "^14.0.2",
+    "winston": "^3.19.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.10",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/morgan": "^1.9.10",
+    "@types/node": "^26.6.3",
+    "@types/nodemailer": "^8.0.2",
+    "@types/passport": "^1.0.17",
+    "@types/passport-google-oauth20": "^2.0.17",
+    "@types/pg": "^8.23.1",
+    "maildev": "3.0.0-rc.2",
+    "nodemon": "^3.1.14",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
